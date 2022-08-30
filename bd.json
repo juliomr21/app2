@@ -1,0 +1,29 @@
+{
+  "producto": [
+    
+    {
+      "nombre": "nnn",
+      "tipo": "",
+      "cantidad": 0,
+      "precioI": 0,
+      "pecioF": 0,
+      "id": 2
+    },
+    {
+      "nombre": "Hupman sin filtro",
+      "tipo": "Cigarro",
+      "cantidad": 30,
+      "precioI": 140,
+      "pecioF": 200,
+      "id": 3
+    },
+    {
+      "nombre": "Criollos",
+      "tipo": "Cigarro",
+      "cantidad": 20,
+      "precioI": 120,
+      "pecioF": 200,
+      "id": 4
+    }
+  ]
+}

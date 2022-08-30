@@ -1,30 +1,51 @@
 <h3 class="container text-center">Importar Producto</h3>
 <hr class="container">
-<div class="container">
-    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+<form [formGroup]="form" class="container" (submit)="negocio()">
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg" style="margin-bottom: 10pt">
 
         <div class="col-lg-4">
-            <input type="text" class="form-control" id="validationServer01" >
+            <input type="text" class="form-control" formControlName="nombre"  >
             <div >
                 Nombre del producto
             </div>
         </div>
 
         <div class="col-lg-4">
-            <input type="text" class="form-control" id="validationServer01" value="Mark" required="">
+            <input type="text" class="form-control"  formControlName="tipo">
             <div>
                 Tipo de producto
             </div>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control " id="validationServer01" value="Mark" required="">
+            <input type="number" class="form-control " formControlName="cantidad">
             <div >
-                Precio
+                cantidad
             </div>
         </div>
-
-
+        <span style="margin-bottom: 2cm;"></span>  
+        <div class="col-lg-4">
+            <input type="number" class="form-control " formControlName="precioI" >
+            <div >
+                Precio de compra
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <input type="number" class="form-control "  formControlName="precioF">
+            <div >
+                Precio de venta
+            </div>
+        </div>
+        <span style="margin-bottom: 2cm;"></span>  
+       
+            <button class="btn btn-primary col-lg-2" > Importar</button>
+      
+        
+      <span style="margin-bottom: 2cm;" ></span>  
 
     </div>
 
+</form>
+<hr>
+<div *ngFor="let item of bd">
+{{item.nombre}} {{item.precioI}}
 </div>

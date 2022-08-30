@@ -1,0 +1,47 @@
+<div class="container">
+
+    <hr>
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg container">
+        <div class="col-lg-4">
+            <h5 class="text-primary">Producto</h5>
+            <select  [(ngModel)]="producto" >
+                <option value="0">seleccione una opcion</option>
+                <option *ngFor="let i of bd">
+                    {{i.nombre}}
+                </option>
+            </select>
+        </div>
+        <div class="col-lg-4">
+            <h5 class="text-primary">Precio de ventas</h5>
+            <input type="number" class="form-control" [(ngModel)]="precio" >
+        </div>
+              
+        
+        <div class="col-lg-4">
+            <h5 class="text-primary">Cantidad</h5>
+            <input type="number" class="form-control" [(ngModel)]="cant">
+        </div>
+        <span style="margin-bottom: 1cm;"></span>
+        
+        <div class="form-check">
+            <input type="radio" name="radios" class="form-check-input" id="Cig">
+            <label class="form-check-label" for="exampleRadio1">Por cigarro</label>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="radio" name="radios" class="form-check-input" id="Caja">
+            <label class="form-check-label" for="exampleRadio2">Por caja</label>
+          </div>
+
+        <div class="col-lg-2" style="margin-top: 1cm;">
+            <button class="btn btn-primary " (click)="procesar()">Actualizar</button>
+        </div>
+        <span style="margin-bottom: 2cm;"></span>
+    </div>
+    
+    <div *ngFor="let item of temp">
+        Producto:  {{item.Producto}} --- Ventas: {{item.Ventas}} --- Fondo: {{item.Fondo}} --- Ganancias: {{item.Ganancias}}
+        </div>
+    
+</div>
+
+ 
